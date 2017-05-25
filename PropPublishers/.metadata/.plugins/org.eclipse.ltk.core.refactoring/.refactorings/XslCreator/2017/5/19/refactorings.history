@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;XslCreator/src/main/resources/static/index.html&apos; to &apos;index-old.html&apos;" description="Rename resource &apos;index.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/index.html" name="index-old.html" stamp="1494605182795" updateReferences="true"/>
+</session>

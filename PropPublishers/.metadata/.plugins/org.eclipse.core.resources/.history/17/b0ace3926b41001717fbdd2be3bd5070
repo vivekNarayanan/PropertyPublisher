@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GeneralSchema"
+	xmlns:tns="http://www.example.org/GeneralSchema" elementFormDefault="qualified">
+	<element name="BLFireBusinessData">
+		<complexType>
+		<sequence>
+			<element name="businessData" type="common:businessData" minOccurs="1" maxOccurs="unbounded"></element>
+		</sequence>
+		</complexType>
+	</element>
+</schema>

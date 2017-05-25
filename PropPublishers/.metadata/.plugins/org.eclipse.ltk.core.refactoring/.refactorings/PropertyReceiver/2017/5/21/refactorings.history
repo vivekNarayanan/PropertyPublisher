@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PropertyReceiver.jar&apos; to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;PropertyReceiver&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original element: &apos;PropertyReceiver.jar&apos;" description="Copy file" element1="build/libs/PropertyReceiver.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1495727737373" target="/XslCreator/lib" units="0" version="1.0"/>
+</session>

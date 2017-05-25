@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore xmlns:bk="http://www.example.org/BooksSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/BooksSchema ../schema/BooksSchema.xsd ">
+	<book>
+		<category>cooking</category>
+		<title>Everyday Italian</title>
+		<author>Giada De Laurentiis</author>
+		<year>2005</year>
+		<price>30.00</price>
+		<editions>
+			<edition>
+				<editionNumber>1.0</editionNumber>
+				<references>Borne Jason</references>
+			</edition>
+			<edition>
+				<editionNumber>1.1</editionNumber>
+				<references>Jason Statham</references>
+			</edition>
+		</editions>
+	</book>
+	<book>
+		<category>children</category>
+		<title>Harry Potter</title>
+		<author>J K. Rowling</author>
+		<year>2005</year>
+		<price>29.99</price>
+		<editions>
+			<edition>
+				<editionNumber>1.0</editionNumber>
+				<references>Borne Jason</references>
+			</edition>
+			<edition>
+				<editionNumber>1.1</editionNumber>
+				<references>Jason Statham</references>
+			</edition>
+		</editions>
+	</book>
+	<book>
+		<category>web</category>
+		<title>Learning XML</title>
+		<author>Erik T. Ray</author>
+		<year>2003</year>
+		<price>39.95</price>
+		<editions>
+			<edition>
+				<editionNumber>1.0</editionNumber>
+				<references>Borne Jason</references>
+			</edition>
+			<edition>
+				<editionNumber>1.1</editionNumber>
+				<references>Jason Statham</references>
+			</edition>
+		</editions>
+	</book>
+</bookstore>

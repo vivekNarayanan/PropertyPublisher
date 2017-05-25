@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bk:bookstore xmlns:bk="http://www.example.org/BooksSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/BooksSchema ../schema/BooksSchema.xsd ">
+	<bk:book>
+		<bk:category>bk:category</bk:category>
+		<bk:title>bk:title</bk:title>
+		<bk:author>bk:author</bk:author>
+		<bk:year>0</bk:year>
+		<bk:price>0.0</bk:price>
+		<bk:editions>
+			<bk:edition>
+				<bk:editionNumber>bk:editionNumber</bk:editionNumber>
+				<bk:references>bk:references</bk:references>
+			</bk:edition>
+		</bk:editions>
+	</bk:book>
+</bk:bookstore>

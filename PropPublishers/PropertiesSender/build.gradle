@@ -1,0 +1,36 @@
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+//sourceCompatibility = 1.8
+//targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+group = 'com.prop.apps'
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.7'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.7'    
+}
+jar{
+	version =  '0.1.0'
+}
+
+mainClassName = "com.properties.main.Main"
+test {
+ useJUnit {
+        includeCategories 'org.gradle.junit.CategoryA'
+        excludeCategories 'org.gradle.junit.CategoryB'
+    }
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+        reports.html.enabled = true
+    }               
+}
+

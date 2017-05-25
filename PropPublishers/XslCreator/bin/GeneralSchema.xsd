@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GeneralSchema"
+	xmlns:general="http://www.example.org/GeneralSchema" 
+	xmlns:common="http://www.example.org/common"
+	elementFormDefault="qualified">
+	<import schemaLocation="common.xsd" namespace="http://www.example.org/common"></import>
+	<element name="BLFireBusinessData">
+		<complexType>
+		<sequence>
+			<element name="businessData" type="common:businessData" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+		</complexType>
+	</element>
+</schema>

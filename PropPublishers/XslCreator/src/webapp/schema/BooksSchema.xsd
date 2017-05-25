@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/BooksSchema"
+	xmlns:bk="http://www.example.org/BooksSchema" elementFormDefault="qualified">
+	<import schemaLocation="BooksSchema.xsd" namespace="http://www.example.org/BooksSchema"></import>
+	<element name="bookstore">
+		<complexType>
+			<sequence>
+				<element name="book" type="bk:book" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="book">
+		<sequence>
+			<element name="category" type="string" />
+			<element name="title" type="string" />
+			<element name="author" type="string" />
+			<element name="year" type="integer" />
+			<element name="price" type="double" />
+			<element name="editions" type="bk:editions" />
+		</sequence>
+	</complexType>
+	<complexType name="editions">
+		<sequence>
+			<element name="edition" type="bk:edition" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="edition">
+		<sequence>
+			<element name="editionNumber" type="string" />
+			<element name="references" type="string" />
+		</sequence>
+	</complexType>
+</schema>

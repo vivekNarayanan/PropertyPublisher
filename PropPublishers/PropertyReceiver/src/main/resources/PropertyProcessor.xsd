@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	targetNamespace="http://www.capgemini.com/schema/myns"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.springframework.org/schema/beans"/>
+	<xs:element name="property-scan">
+		<xs:complexType>
+			<xs:attribute name="package" use="required" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

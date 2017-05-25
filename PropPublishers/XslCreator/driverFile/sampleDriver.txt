@@ -1,0 +1,4 @@
+#SEQID|#RECID|#RECNAME|
+Everyday Italian|cooking|Giada De Laurentiis|30.00|1.0|1.1|
+Harry Potter|children|J K. Rowling|29.99|1.0|1.1|
+Learning XML|web|Erik T. Ray|39.95|1.0|1.1|

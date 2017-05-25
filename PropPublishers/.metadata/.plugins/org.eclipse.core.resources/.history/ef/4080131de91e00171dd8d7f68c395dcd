@@ -1,0 +1,67 @@
+package com.sf.xslcreator.controller;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.StringReader;
+import java.io.StringWriter;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+
+import org.eclipse.persistence.dynamic.DynamicEntity;
+import org.eclipse.persistence.jaxb.dynamic.DynamicJAXBContext;
+import org.eclipse.persistence.jaxb.dynamic.DynamicJAXBContextFactory;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class XslController {
+
+	@RequestMapping("/transform")
+	@ResponseBody
+	public String login(@RequestParam("xmlString") String xmlString, @RequestParam("xslString")String xslString) {
+		String result="No Transformation";
+		try {
+			StringReader xmlReader = new StringReader(xmlString);
+			StringReader xslReader = new StringReader(xslString);
+		    StringWriter writer = new StringWriter();
+		    TransformerFactory tFactory = TransformerFactory.newInstance();
+		    Transformer transformer = tFactory.newTransformer(
+		            new StreamSource(xslReader));
+		    transformer.transform(
+		            new StreamSource(xmlReader), 
+		            new StreamResult(writer));
+
+		     result = writer.toString();
+		} catch (TransformerException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	@RequestMapping("/fillxml")
+	@ResponseBody
+	public String fillXml(@RequestParam("driverFileStr") String driverStr, @RequestParam("schema") String schemaStr) throws FileNotFoundException, JAXBException {
+		String result="No xml generated";
+		result=generateXML(driverStr, schemaStr);
+		return result;
+	}
+	private String generateXML(String driverStr, String schemaStr) throws FileNotFoundException, JAXBException {
+		FileInputStream xsdInputStream = new FileInputStream("src/example/customer.xsd");
+		DynamicJAXBContext jaxbContext = 
+		    DynamicJAXBContextFactory.createContextFromXSD(xsdInputStream, null, null, null);
+		
+		FileInputStream xmlInputStream = new FileInputStream("src/webapp/xmlfiles/sample1.xml");
+		Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+		DynamicEntity customer = (DynamicEntity) unmarshaller.unmarshal(xmlInputStream);
+		
+		return driverStr;
+	}
+	
+}
