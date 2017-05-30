@@ -1,0 +1,9 @@
+package com.sf.xslcreator.serviceimpl;
+
+public class StorageException extends Exception {
+
+	public StorageException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div hidden="true">
+		<form action="/transform" method="post">
+			<div class="divTable">
+				<div class="divTableBody">
+					<div class="divTableRow">
+						<div class="divTableCell">XML Text</div>
+						<div class="divTableCell">XSL Text</div>
+					</div>
+					<div class="divTableRow">
+						<div class="divTableCell">
+							<textarea name="xmlString" cols="80px" rows="35px"></textarea>
+
+						</div>
+						<div class="divTableCell">
+							<textarea name="xslString" cols="80px" rows="35px"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<input type="submit" name="Submit" value="Submit" />
+			</div>
+		</form>
+	</div>
+	<form action="/fillxml" method="post">
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableCell">Json Object</div>
+					<div class="divTableCell">Schema</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell">
+						<textarea name="inputJson" cols="80px" rows="35px"></textarea>
+					</div>
+					<div class="divTableCell">
+						<textarea name="schema" cols="80px" rows="35px"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="submit" name="Submit" value="Submit" />
+		</div>
+	</form>
+</body>
+</html>

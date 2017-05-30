@@ -10,12 +10,14 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="com.sf.xslcreator.controller" />
+	<context:component-scan base-package="com.sf.xslcreator.serviceimpl" />
 
 
 	<bean id="propertyScanProcessor" class="com.properties.receiver.processor.PropertyScanProcessor">
 		<constructor-arg>
 			<list>
 				<ref bean="xslController" />
+				<ref bean="fileSystemStorageService" />
 				<!-- <value>com.demo.srcpkg</value> -->
 				<!-- <value>com.demo.destpkg</value> -->
 			</list>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Browse and Generate Class</title>
+</head>
+<body>
+	<div>
+		<div>Schema</div>
+		<div>
+			<textarea rows="40" cols="189"></textarea>
+		</div>
+	</div>
+</body>
+</html>

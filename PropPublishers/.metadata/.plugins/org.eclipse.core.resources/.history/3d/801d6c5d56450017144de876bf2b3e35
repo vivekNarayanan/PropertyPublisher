@@ -1,0 +1,6 @@
+publishPort=7777
+publishPacketSize=65536
+propertiesFileTopublish = Test.properties
+hostName = localhost
+activePropertyFile = tenantConfig.properties
+UserDtls = {"admin:igate@123","vivek:dec@2016","user:pass"}

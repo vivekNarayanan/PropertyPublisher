@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.outer-cover {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	text-align: center;
+	font-family: monospace;
+}
+
+.footer {
+	text-align: center;
+	font-family: monospace;
+	padding: 15px;
+	
+}
+.footer footer{
+font-family: monospace;
+font-style: italic;
+}
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	text-align: center;
+	font-family: monospace;
+}
+
+.flex-container>* {
+	padding: 15px;
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+}
+
+.article {
+	text-align: justify;
+}
+
+img {
+	box-shadow: 3px 3px 3px #888888;
+}
+
+.midsection {
+	text-align: left;
+	border: 1px solid #555;
+}
+
+header {
+	background: #9e9e9e;
+	color: white;
+	font-family: monospace;
+	font-style: italic;
+}
+
+footer {
+	background: #aaa;
+	color: white;
+	font-family: monospace;
+}
+
+.nav {
+	background: #eee;
+}
+
+.nav ul {
+	list-style-type: none;
+	padding: 0;
+	font-family: monospace;
+	list-style-position: outside;
+}
+
+.nav ul li:hover {
+	background-color: #9e9e9e;
+}
+
+.nav ul a {
+	text-decoration: none;
+}
+
+.nav ul li a {
+	display: block;
+	width: 60px;
+}
+
+.nav ul a:hover {
+	text-decoration: underline;
+}
+
+@media all and (min-width: 768px) {
+	.nav {
+		text-align: left;
+		-webkit-flex: 1 auto;
+		flex: 1 auto;
+		-webkit-order: 1;
+		order: 1;
+	}
+	.article {
+		-webkit-flex: 5 0px;
+		flex: 5 0px;
+		-webkit-order: 2;
+		order: 2;
+	}
+	footer {
+		-webkit-order: 3;
+		order: 3;
+	}
+}
+</style>
+<title>Property Gallery</title>
+</head>
+<body>
+	<div class="outer-cover">
+		<div class="flex-container">
+			<header>
+				<h1>Property Publishers</h1>
+			</header>
+			<!-- 		<nav class="nav"> -->
+			<!-- 			<ul> -->
+			<!-- 				<li><a href="#">Spring Implementation</a></li> -->
+			<!-- 				<li><a href="#">Core Java Implementation</a></li> -->
+			<!-- 				<li><a href="#">Struts Implementation</a></li> -->
+			<!-- 			</ul> -->
+			<!-- 		</nav> -->
+			<article class="article">
+				<h1>Summary</h1>
+				<ul>
+					<li>Problem Statement</li>
+					<li>High Level Solution</li>
+					<li>Design</li>
+					<li>Features</li>
+					<li>inbuilt</li>
+					<li>Features Road Map</li>
+					<li>Inspiration</li>
+				</ul>
+			</article>
+			<article class="article">
+				<h1>Problem Statement</h1>
+				<p>Managing Properties and configuration of an application has
+					become a tedious task with the increasing number of implementations
+					on load balancers enabled environment.</p>
+				<p>Making a change in configuration becomes a nightmare, because
+					each server in the environment has to be brought down.</p>
+				<p>In some occasion even rebuilding of the application is
+					required if the configuration is inside the jar.</p>
+				<p>Location of the Property file and the content of the property
+					file is visible to all and its predictable too.</p>
+			</article>
+			<article class="article">
+				<h1>High Level Solution</h1>
+				<p>
+					<img alt="Resolution image" src="images/resolution.png"
+						height="210px" width="380px">
+				</p>
+			</article>
+		</div>
+		<div class="flex-container">
+			<article class="article">
+				<h1>Features Road Map</h1>
+				<ul>
+					<li>Integrate with Source Repositories such as SVN and GIT to
+						read Properties file.</li>
+					<li>Automatic pushing of configuration to client as soon as
+						the change is made in Server.</li>
+					<li>Creating a information page to show the list of users
+						attached to the server.</li>
+					<li>Encrypting the properties file as soon as the properties
+						are published.</li>
+					<li>Authorization based properties publishing.</li>
+				</ul>
+			</article>
+			<article class="article">
+				<h1>Access Items</h1>
+				<ul>
+					<li><a href="/home.html"></a>JSON Object to Driver File</li>
+					
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="footer">
+		<footer>Inspiration: Netflix tech stack.</footer>
+	</div>
+</body>
+</html>

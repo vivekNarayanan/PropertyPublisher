@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Browse and Generate Class</title>
+</head>
+<body>
+	<form action="/generateClasses" method="post"  enctype = "multipart/form-data">
+		<div>
+			<div>Schema</div>
+			<div align="right">
+				<input type="file" value="SchemaFile" multiple="multiple" name="schemaFile" />
+			</div>
+			<div>
+				<textarea rows="38" cols="189"></textarea>
+			</div>
+			<div align="right">
+				<input type="submit" value="Generate"/>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.sf.xslcreator.serviceimpl;
+
+import java.io.IOException;
+
+public class StorageException extends Exception {
+
+	public StorageException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public StorageException(String string, IOException e) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

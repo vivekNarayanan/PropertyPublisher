@@ -1,0 +1,5 @@
+package com.sf.xslcreator.service;
+
+public interface StorateService {
+
+}
