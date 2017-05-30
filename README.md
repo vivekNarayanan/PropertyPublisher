@@ -32,3 +32,11 @@ Automatic pushing of configuration to client as soon as the change is made in Se
 Creating a information page to show the list of users attached to the server.
 Encrypting the properties file as soon as the properties are published.
 Authorization based properties publishing.
+
+# How to use?
+# Server 
+1. Download the PropertiesSender.
+2. Execute the Main Class
+3. This will start publishing the property file in http.
+
+# Client
